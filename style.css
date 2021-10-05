@@ -1,0 +1,146 @@
+:root {
+  --color-orange: hsl(31, 77%, 52%);
+  --color-cyan: hsl(184, 100%, 22%);
+  --color-green: hsl(179, 100%, 13%);
+  --color-gray: hsla(0, 0%, 100%, 0.75);
+  --color-white: hsl(0, 0%, 95%);
+
+  --font-primary: "Lexend Deca", sans-serif;
+  --font-secondary: "Big Shoulders Display", cursive;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  color: var(--color-white);
+  font-family: var(--font-primary);
+  font-size: 1.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.container {
+  width: 85%;
+  max-width: 40rem;
+}
+
+@media (min-width: 1140px) {
+  .container {
+    max-width: 90rem;
+  }
+}
+
+.cards {
+  border-radius: 0.7rem;
+  overflow: hidden;
+  margin: 5rem 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+@media (min-width: 1140px) {
+  .cards {
+    margin: 12rem 0;
+    flex-direction: row;
+  }
+}
+
+.card {
+  padding: 5rem;
+  padding-bottom: 6rem;
+}
+
+.card--orange {
+  background-color: var(--color-orange);
+}
+
+.card--cyan {
+  background-color: var(--color-cyan);
+}
+
+.card--green {
+  background-color: var(--color-green);
+}
+
+.card__title {
+  text-transform: uppercase;
+  font-family: var(--font-secondary);
+  font-size: 4rem;
+  margin: 3rem 0;
+}
+
+.card__text {
+  color: var(--color-gray);
+  line-height: 2.6rem;
+  font-size: 1.4rem;
+  font-weight: 400;
+  margin-bottom: 4rem;
+}
+@media (min-width: 1140px) {
+  .card__text {
+    margin-bottom: 10rem;
+    font-size: 1.45rem;
+  }
+}
+.card__button {
+  background-color: var(--color-white);
+  text-decoration: none;
+  border-radius: 3rem;
+  padding: 1.5rem 3rem;
+  border: 0.2rem solid transparent;
+}
+@media (min-width: 1140px) {
+  .card__button {
+    transition: all 0.2s;
+  }
+
+  .card__button:hover {
+    color: var(--color-white);
+    background-color: transparent;
+    border: 0.2rem solid var(--color-white);
+  }
+}
+.card__button--orange {
+  color: var(--color-orange);
+}
+
+.card__button--cyan {
+  color: var(--color-cyan);
+}
+
+.card__button--green {
+  color: var(--color-green);
+}
+
+.attribution {
+  color: #000;
+  font-size: 1rem;
+  text-align: center;
+  margin: 2rem 0 1rem 0;
+}
+
+.attribution__link:link,
+.attribution__link:visited {
+  color: var(--color-cyan);
+  text-transform: uppercase;
+  transition: all 0.2s;
+}
+
+.attribution__link:hover,
+.attribution__link:active {
+  color: var(--color-secondary);
+}
